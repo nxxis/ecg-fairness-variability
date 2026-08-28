@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Raw datasets (downloaded via data/README.md, not committed)
+data/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3/
+data/georgia/
+data/*.zip
+
+# Large / regenerable intermediate artifacts
+*.log

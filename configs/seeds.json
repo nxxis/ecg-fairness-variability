@@ -1,0 +1,6 @@
+{
+  "seeds": [42, 123, 2026, 7, 99, 256, 512, 777, 2024, 31415],
+  "primary_seed": 42,
+  "n_seeds": 10,
+  "note": "Fixed prior to any training run to preclude post-hoc seed selection (paper Section III-D). The primary_seed (42) is used for all single-run analyses (Section IV-A-D) and is reused, not retrained, as the seed-42 member of the ten-seed multi-run stability suite (Section IV-E)."
+}

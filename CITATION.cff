@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this code or checkpoints, please cite the paper below. The paper is currently under review at IEEE JBHI; update the preferred-citation block with volume/issue/DOI once published."
+title: "Predictive Stability Versus Fairness Instability in Multi-Label ECG Classification: A Multi-Seed, Cross-Institutional Analysis"
+type: software
+license: MIT
+repository-code: "https://github.com/<your-username>/<repo-name>"
+authors:
+  - family-names: Sharma
+    given-names: Sudip
+    affiliation: "Morgan State University, Department of Computer Science"
+    email: susha8@morgan.edu
+  - family-names: Bhatta
+    given-names: Bto
+    affiliation: "Morgan State University, Department of Nursing"
+  - family-names: Merchant
+    given-names: Kenzi
+    affiliation: "Morgan State University, Department of Electrical & Computer Engineering"
+  - family-names: Egwuchukwu
+    given-names: Stephanie
+    affiliation: "Morgan State University, Department of Philosophy and Religious Studies"
+  - family-names: Sheared
+    given-names: Kayvon
+    affiliation: "Xavier University of Louisiana, Department of Psychology"
+  - family-names: Ojeme
+    given-names: Blessing
+    affiliation: "Morgan State University, Department of Computer Science"
+preferred-citation:
+  type: article
+  title: "Predictive Stability Versus Fairness Instability in Multi-Label ECG Classification: A Multi-Seed, Cross-Institutional Analysis"
+  journal: "IEEE Journal of Biomedical and Health Informatics"
+  status: "submitted"
+  authors:
+    - family-names: Sharma
+      given-names: Sudip
+    - family-names: Bhatta
+      given-names: Bto
+    - family-names: Merchant
+      given-names: Kenzi
+    - family-names: Egwuchukwu
+      given-names: Stephanie
+    - family-names: Sheared
+      given-names: Kayvon
+    - family-names: Ojeme
+      given-names: Blessing
