@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code or checkpoints, please cite the paper below. The paper is currently under review at IEEE JBHI; update the preferred-citation block with volume/issue/DOI once published."
-title: "Predictive Stability Versus Fairness Instability in Multi-Label ECG Classification: A Multi-Seed, Cross-Institutional Analysis"
+title: "Discrimination Stability and Fairness Variability in Multi-Label ECG Classification: A Multi-Seed, External-Cohort Analysis"
 type: software
 license: MIT
-repository-code: "https://github.com/<your-username>/<repo-name>"
+repository-code: "https://github.com/nxxis/ecg-fairness-instability"
 authors:
   - family-names: Sharma
     given-names: Sudip
@@ -12,21 +12,30 @@ authors:
   - family-names: Bhatta
     given-names: Bto
     affiliation: "Morgan State University, Department of Nursing"
+    email: btbha1@morgan.edu
   - family-names: Merchant
     given-names: Kenzi
     affiliation: "Morgan State University, Department of Electrical & Computer Engineering"
+    email: kemer9@morgan.edu
   - family-names: Egwuchukwu
     given-names: Stephanie
     affiliation: "Morgan State University, Department of Philosophy and Religious Studies"
+    email: stegw1@morgan.edu
   - family-names: Sheared
     given-names: Kayvon
     affiliation: "Xavier University of Louisiana, Department of Psychology"
+    email: ksheared@xula.edu
   - family-names: Ojeme
     given-names: Blessing
     affiliation: "Morgan State University, Department of Computer Science"
+    email: blessing.ojeme@morgan.edu
+  - family-names: Rahman
+    given-names: "Md Mahmudur"
+    affiliation: "Morgan State University, Department of Computer Science"
+    email: md.rahman@morgan.edu
 preferred-citation:
   type: article
-  title: "Predictive Stability Versus Fairness Instability in Multi-Label ECG Classification: A Multi-Seed, Cross-Institutional Analysis"
+  title: "Discrimination Stability and Fairness Variability in Multi-Label ECG Classification: A Multi-Seed, External-Cohort Analysis"
   journal: "IEEE Journal of Biomedical and Health Informatics"
   status: "submitted"
   authors:
@@ -42,3 +51,9 @@ preferred-citation:
       given-names: Kayvon
     - family-names: Ojeme
       given-names: Blessing
+    - family-names: Rahman
+      given-names: "Md Mahmudur"
+  contact:
+    - family-names: Sharma
+      given-names: Sudip
+      email: susha8@morgan.edu
