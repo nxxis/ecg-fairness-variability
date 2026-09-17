@@ -22,7 +22,7 @@
         57.68450067430658
       ]
     },
-    "Mitigated 1D-CNN": {
+    "Reweighted 1D-CNN": {
       "a_cv": 0.29353571518428895,
       "b_cv": 15.1130920662146,
       "difference": 14.819556351030311,
@@ -89,7 +89,7 @@
       ]
     }
   },
-  "mitigation_cv": {
+  "reweighting_cv": {
     "a_cv": 11.372998958450207,
     "b_cv": 15.1130920662146,
     "difference": 3.740093107764393,
@@ -119,7 +119,7 @@
         46.19047619047619
       ]
     },
-    "Mitigated OF-MI FNR": {
+    "Reweighted OF-MI FNR": {
       "estimate": 25.688073394495415,
       "ci": [
         20.0,

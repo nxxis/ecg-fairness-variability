@@ -30,17 +30,17 @@ This table maps each block to what it produces in the paper.
 | 2 | Imports, global config, seed list | III-D, Section III | `configs/seeds.json` mirrors this |
 | 3 | PTB-XL acquisition | III-A | `data/` |
 | 4 | SCP → superclass mapping, official 10-fold split | III-A, III-B | Table I |
-| 5 | `Dataset`/`DataLoader`, class-frequency weights (Eq. 1) | III-B, III-D (Mitigated CNN) | — |
-| 6 | Model architectures (Baseline, Mitigated, Large, Transformer) | III-C | Table II |
+| 5 | `Dataset`/`DataLoader`, class-frequency weights (Eq. 1) | III-B, III-D (Reweighted CNN) | — |
+| 6 | Model architectures (Baseline, Reweighted, Large, Transformer) | III-C | Table II |
 | 7 | Early stopping, training loops (standard + reweighted + Transformer schedule) | III-D | — |
 | 8 | Subgroup definitions, inference | III-E | — |
 | 9 | FNR/FPR/equalized-odds computation, bootstrap CIs, DeLong test, Brown-Forsythe test | III-E, III-G | — |
 | 10 | Checkpoint & prediction caching (`train_or_load`) | III-D (persisted weights) | `checkpoints/` |
 | 11 | Single-run training + evaluation, seed 42 | IV-A, IV-B, IV-C | Tables III, IV, V; DeLong results |
-| 12 | Multi-run stability, 10 seeds, all four architectures, fixed vs. validation-F1 threshold | III-F, IV-D, IV-E | Table VI, Table XIII, Fig. 1, Appendix A (Table XIV) |
+| 12 | Multi-run stability, 10 seeds, all four architectures, fixed vs. validation-F1 threshold | III-F, IV-D, IV-E | Table VI, Table XIII, Fig. 2, Appendix A (Table XIV) |
 | — | Supplementary, disabled by default (`RUN_OPTIONAL_DIAGNOSTICS`): Grad-CAM clinical-alignment scoring | not reported in the paper | — |
 | 14 | Supplementary, disabled by default: robustness to clinical signal artifacts (Baseline CNN only) | not reported in the paper | — |
-| 15 | Paper figures (internal) | IV-E | `Figure3_Stability` = paper Fig. 1; other files are supplementary, not embedded in the paper |
+| 15 | Paper figures (internal) | IV-E | `Figure3_Stability` = paper Fig. 2; other files are supplementary, not embedded in the paper. (The paper's Fig. 1, a schematic of the overall study pipeline, is a hand-authored diagram and is not produced by any notebook block.) |
 | 16 | Georgia database acquisition | III-H | — |
 | 17 | SNOMED-CT → superclass crosswalk (main + conservative) | III-H, VII | — |
 | 18 | External preprocessing, dataset, dataloader; crosswalk-sensitivity check | III-H, VII | — |

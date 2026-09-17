@@ -151,7 +151,7 @@
       "disparity": 33.032345013477084
     }
   ],
-  "Mitigated 1D-CNN": [
+  "Reweighted 1D-CNN": [
     {
       "seed": 42,
       "tau": 0.49,

@@ -17,7 +17,7 @@ stochastic elements of independently executed training runs — for automated 12
 interpretation:
 
 - **Four architectures** — a Baseline 1D-CNN, an identical network with class-frequency-reweighted
-  loss ("Mitigated"), a larger-capacity 1D-CNN, and a Hybrid CNN-Transformer — each trained from
+  loss ("Reweighted"), a larger-capacity 1D-CNN, and a Hybrid CNN-Transformer — each trained from
   **ten independent random seeds** on **PTB-XL** (n = 21,799 recordings, 18,869 patients).
 - **Fairness audited two ways**: FNR parity and the stronger equalized-odds criterion (the larger
   of the FNR and FPR disparities), across four intersectional sex × age subgroups, for all five
@@ -43,16 +43,18 @@ interpretation:
   checkpoint and are **not** part of the paper's central analysis or its reported tables.
 
 **Central findings**: macro-AUROC coefficient of variation (CV) across seeds is 0.17–0.41% for
-every architecture, while fixed-threshold FNR for MI in an older-female subgroup has CV of
-11.4–15.1% — 11–52× larger under a matched same-subgroup AUROC comparison, with bootstrap
-confidence intervals excluding a ratio of 1 for every architecture. Re-selecting the threshold
-does not resolve this uniformly (it *increases* FNR CV for two architectures and *decreases* it
-for the other two). A joint FNR/FPR audit surfaces a 23.7 pp false-positive-rate disparity that
-FNR-only auditing misses. Class-frequency reweighting reduces older-female MI FNR by 46.4% at a
-fixed threshold, but that advantage is not statistically established once thresholds are
-independently re-selected per model or matched to a common sensitivity target. External
-validation on the Georgia database preserves architecture ranking at the extremes while the two
-middle-ranked models swap places. See the paper for the complete tables (I–XVI) and discussion.
+every architecture, while fixed-threshold FNR for MI in an older-female subgroup has an
+across-seed standard deviation of 3.1–5.6 percentage points, with a CV 11–52× that of
+same-subgroup AUROC (95% bootstrap confidence intervals exclude a ratio of 1 for every
+architecture, though the ratio depends on each metric's mean). Re-selecting the threshold does
+not resolve this uniformly (it *increases* FNR CV for two architectures and *decreases* it for
+the other two). A joint FNR/FPR audit surfaces a 23.7 pp false-positive-rate disparity that
+FNR-only auditing misses. Class-frequency reweighting reduces mean older-female MI FNR by 46.4%
+at a fixed threshold, but that advantage is not statistically established under independently
+selected thresholds or a common sensitivity target. External validation on the Georgia database
+preserves the highest- and lowest-ranked architectures while the two middle-ranked models swap
+places. A single run can misrepresent fairness: stable discrimination does not imply stable
+subgroup error rates. See the paper for the complete tables (I–XVI) and discussion.
 
 ## Repository structure
 
@@ -62,7 +64,7 @@ deliberately mirrors the notebook's own Google Drive project folder
 the notebook's hardcoded paths just work. See "Running this in Google Colab" below.
 
 ```
-ecg-fairness-instability/
+ecg-fairness-variability/
 ├── notebooks/main.ipynb            Main pipeline notebook (22 numbered blocks + lettered
 │                                     appendix blocks A-I, Colab-native)
 ├── configs/seeds.json              The 10 fixed seeds
@@ -70,8 +72,9 @@ ecg-fairness-instability/
 ├── checkpoints/                    All 40 trained checkpoints plus cached predictions,
 │                                     thresholds, and training history (4 architectures x
 │                                     10 seeds, ~78 MB)
-├── figures/                        Generated figures (only one appears in the paper body;
-│                                     the rest are supplementary notebook output)
+├── figures/                        Generated figures (one — Fig. 2 — appears in the paper
+│                                     body; the paper's Fig. 1 is a hand-drawn pipeline diagram
+│                                     not produced by this notebook; the rest are supplementary)
 ├── docs/reproducibility.md         Notebook-block-to-paper-section map, environment record
 ├── requirements.txt                Only needed for loading checkpoints outside Colab
 ├── CITATION.cff
@@ -119,9 +122,9 @@ no local Python environment, no GPU of your own required.
    - Appendix Blocks A–I (near the end of the notebook) re-run the multi-run, threshold-policy,
      and validation-selection analyses reported in Sections IV-E through IV-I and Appendices A–C,
      reusing cached predictions rather than retraining.
-   - Every paper table is printed directly to cell output; the one figure that appears in the
-     paper body, plus several supplementary plots, are saved to `{PROJECT_DIR}/figures`
-     (Blocks 15 and 22).
+   - Every paper table is printed directly to cell output; the one notebook-generated figure
+     that appears in the paper body (Fig. 2), plus several supplementary plots, are saved to
+     `{PROJECT_DIR}/figures` (Blocks 15 and 22).
 
 5. **Retrieve results.** Copy `{PROJECT_DIR}/figures` back out of Drive if you want the
    regenerated figures versioned in this repo, and copy any table output you need from the cell

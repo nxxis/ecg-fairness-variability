@@ -3,7 +3,7 @@ message: "If you use this code or checkpoints, please cite the paper below. The 
 title: "Discrimination Stability and Fairness Variability in Multi-Label ECG Classification: A Multi-Seed, External-Cohort Analysis"
 type: software
 license: MIT
-repository-code: "https://github.com/nxxis/ecg-fairness-instability"
+repository-code: "https://github.com/nxxis/ecg-fairness-variability"
 authors:
   - family-names: Sharma
     given-names: Sudip
